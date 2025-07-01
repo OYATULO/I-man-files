@@ -1,3 +1,10 @@
+# Добавлено новый таблица тип банка
+CREATE TABLE `i-man`.`typebank` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 # Обновит таб Sales 
 ALTER TABLE `i-man`.`sales` 
 ADD COLUMN `Bank` VARCHAR(45) NULL AFTER `clientdata`;
