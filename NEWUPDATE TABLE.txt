@@ -1,11 +1,7 @@
 ALTER TABLE `i-man`.`users` 
 ADD COLUMN `Macaddress` VARCHAR(45) NULL AFTER `RoleId`;
 
-============= New Update for ALL table =============
-ALTER TABLE `i-man`.`mdaftereditrevision` 
-ADD COLUMN `User` VARCHAR(45) NULL AFTER `Checked`,
-ADD COLUMN `UnitAmount` INT NULL DEFAULT NULL AFTER `AmountUnit`;
-============= New Update for ALL table =============
+
 
 CREATE TABLE `i-man`.`mdaftereditrevision` (
   `ID` INT NOT NULL AUTO_INCREMENT,
@@ -29,6 +25,13 @@ CREATE TABLE `i-man`.`mdaftereditrevision` (
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
+============= New Update for ALL table =============
+ALTER TABLE `i-man`.`mdaftereditrevision` 
+ADD COLUMN `User` VARCHAR(45) NULL AFTER `Checked`,
+ADD COLUMN `UnitAmount` INT NULL DEFAULT NULL AFTER `AmountUnit`;
+============= New Update for ALL table =============
+
 
 CREATE TABLE `i-man`.`datalog` (
   `iddatalog` INT(11) NOT NULL AUTO_INCREMENT ,
