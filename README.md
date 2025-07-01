@@ -7,7 +7,7 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 # Обновит таб Sales 
 ALTER TABLE `i-man`.`sales` 
-ADD COLUMN `Bank` VARCHAR(45) NULL AFTER `clientdata`;
+ADD COLUMN `Bank` INT(11) NULL DEFAULT NULL AFTER `clientdata`;
 # Обновит таблица Users
 ALTER TABLE `i-man`.`users` 
 ADD COLUMN `Macaddress` VARCHAR(45) NULL AFTER `RoleId`;
