@@ -1,3 +1,6 @@
+# Обновит таб Sales 
+ALTER TABLE `i-man`.`sales` 
+ADD COLUMN `Bank` VARCHAR(45) NULL AFTER `clientdata`;
 # Обновит таблица Users
 ALTER TABLE `i-man`.`users` 
 ADD COLUMN `Macaddress` VARCHAR(45) NULL AFTER `RoleId`;
