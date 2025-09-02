@@ -12,27 +12,29 @@ ADD COLUMN `Bank` INT(11) NULL DEFAULT NULL AFTER `clientdata`;
 ALTER TABLE `i-man`.`users` 
 ADD COLUMN `Macaddress` VARCHAR(45) NULL AFTER `RoleId`;
 # Добавит таблица Отчет по ревизия 
-   CREATE TABLE `i-man`.`mdaftereditrevision` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Sklad` VARCHAR(45) NULL,
-  `Namegoods` VARCHAR(255) NULL,
-  `D_srok` DATETIME NULL,
-  `Price` DECIMAL(18,2) NULL,
-  `Summa` DECIMAL(18,2) NULL,
-  `Barcode` VARCHAR(255) NULL,
-  `UnitAmount` INT NULL DEFAULT NULL,
-  `AmountContainer` INT NULL,
-  `AmountUnit` INT NULL,
-  `I_AmountContainer` INT NULL,
-  `I_AmountUnit` INT NULL,
-  `N_AmountContainer` INT NULL,
-  `N_AmountUnit` INT NULL,
-  `Polka` VARCHAR(128) NULL,
-  `Checked` TINYINT NULL,
-  `User` VARCHAR(45) NULL AFTER,
-  `Date_inserted` DATETIME NULL
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB
+DROP TABLE IF EXISTS mdaftereditrevision;
+CREATE TABLE mdaftereditrevision (
+  ID int NOT NULL AUTO_INCREMENT,
+  Sklad varchar(45) DEFAULT NULL,
+  Namegoods varchar(255) DEFAULT NULL,
+  D_srok datetime DEFAULT NULL,
+  Price decimal(18,2) DEFAULT NULL,
+  Summa decimal(18,2) DEFAULT NULL,
+  Barcode varchar(255) DEFAULT NULL,
+  AmountContainer int DEFAULT NULL,
+  AmountUnit int DEFAULT NULL,
+  UnitAmount int DEFAULT NULL,
+  I_AmountContainer int DEFAULT NULL,
+  I_AmountUnit int DEFAULT NULL,
+  N_AmountContainer int DEFAULT NULL,
+  N_AmountUnit int DEFAULT NULL,
+  Polka varchar(128) DEFAULT NULL,
+  Checked tinyint DEFAULT NULL,
+  User varchar(45) DEFAULT NULL,
+  Date_inserted datetime DEFAULT NULL,
+  PRIMARY KEY (ID)
+)
+ENGINE = InnoDB AUTO_INCREMENT=1
 DEFAULT CHARACTER SET = utf8;
-
  # I-man-files
+
