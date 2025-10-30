@@ -1,6 +1,8 @@
 # Обновлено таблица перемешение
 ALTER TABLE `i-man`.`history_per` 
 ADD COLUMN `Users_ID` INT(11) NULL AFTER `toware`;
+ALTER TABLE `i-man`.`history_per` 
+ADD INDEX `UsersID` (`Users_ID` ASC);
   
 # Добавлено новый таблица тип банка
 CREATE TABLE `i-man`.`typebank` (
@@ -41,6 +43,7 @@ CREATE TABLE mdaftereditrevision (
 ENGINE = InnoDB AUTO_INCREMENT=1
 DEFAULT CHARACTER SET = utf8;
  # I-man-files
+
 
 
 
