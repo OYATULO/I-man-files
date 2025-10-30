@@ -1,3 +1,7 @@
+#  Обновлено таблица история возврата
+ALTER TABLE `i-man`.`returnincome` 
+ADD COLUMN `warehouseid` INT(11) NULL AFTER `datereturn`;
+
 # Обновлено таблица перемешение
 ALTER TABLE `i-man`.`history_per` 
 ENGINE = MyISAM ;
@@ -51,6 +55,7 @@ CREATE TABLE mdaftereditrevision (
 ENGINE = InnoDB AUTO_INCREMENT=1
 DEFAULT CHARACTER SET = utf8;
  # I-man-files
+
 
 
 
