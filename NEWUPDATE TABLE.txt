@@ -1,3 +1,7 @@
+ALTER TABLE `i-man`.`to_order` 
+ADD COLUMN `kassir` VARCHAR(45) NULL DEFAULT NULL AFTER `warehouseid`;
+
+
 ALTER TABLE `i-man`.`users` 
 ADD COLUMN `Macaddress` VARCHAR(45) NULL AFTER `RoleId`;
 
