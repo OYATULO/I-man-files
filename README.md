@@ -1,3 +1,20 @@
+
+#  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
+CREATE TABLE `customfororder` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `Barcode` varchar(45) DEFAULT NULL,
+  `AmountUnit` int(11) DEFAULT NULL,
+  `AmountContainer` int(11) DEFAULT NULL,
+  `UnitAmount` int(11) DEFAULT NULL,
+  `IncomePrice` decimal(18,2) DEFAULT NULL,
+  `SalePrice` decimal(18,2) DEFAULT NULL,
+  `Srok` datetime DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+
+//////////////////////////////////////////////////////////
+
 #  Обновлено таблица Заявка номи касир баровардан
 ALTER TABLE `i-man`.`to_order` 
 ADD COLUMN `kassir` VARCHAR(45) NULL DEFAULT NULL AFTER `warehouseid`;
@@ -59,6 +76,7 @@ CREATE TABLE mdaftereditrevision (
 ENGINE = InnoDB AUTO_INCREMENT=1
 DEFAULT CHARACTER SET = utf8;
  # I-man-files
+
 
 
 
