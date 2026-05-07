@@ -10,9 +10,13 @@ CREATE TABLE `i-man`.`tb_asynkassa` (
   `AmountCountainer` INT NULL,
   `AmountUnit` INT NULL,
   `DateTime_In` DATETIME NULL,
-  PRIMARY KEY (`Id`))
+  PRIMARY KEY (`Id`),
+  UNIQUE INDEX `KassirId_UNIQUE` (`KassirId` ASC),
+  UNIQUE INDEX `ProductId_UNIQUE` (`ProductId` ASC)
+)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
