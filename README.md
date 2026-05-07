@@ -1,7 +1,18 @@
 
 ============= NEW FOR REAL TIME =============
 #  ТАБЛИЦАИ НАВ РЕАЛ ТАЙМ КАСИРО ДАР ВАКТИ ПРОДАЖА
-
+CREATE TABLE `i-man`.`tb_asynkassa` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `KassirName` VARCHAR(25) NULL,
+  `KassirId` INT(11) NULL,
+  `ProductId` INT NULL,
+  `ProductName` VARCHAR(45) NULL,
+  `AmountCountainer` INT NULL,
+  `AmountUnit` INT NULL,
+  `DateTime_In` DATETIME NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
