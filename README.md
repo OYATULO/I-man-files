@@ -1,4 +1,7 @@
 
+============= NEW FOR REAL TIME =============
+#  ТАБЛИЦАИ НАВ РЕАЛ ТАЙМ КАСИРО ДАР ВАКТИ ПРОДАЖА
+
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
