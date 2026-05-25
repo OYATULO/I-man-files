@@ -1,4 +1,17 @@
+#  ТАБЛИЦАИ НАВ БАРОИ ЛОГ КАССИРО 
+CREATE TABLE log_kassir (
+    id           INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_kassir    INT          NOT NULL,
+    name_kassir  VARCHAR(100) NOT NULL,
+    action       VARCHAR(50)  NOT NULL,
+    action_msg   TEXT,
+    date_time    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
+    INDEX idx_kassir  (id_kassir),
+    INDEX idx_action  (action),
+    INDEX idx_date    (date_time)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+//////////////////////////////////////////////////////////
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
