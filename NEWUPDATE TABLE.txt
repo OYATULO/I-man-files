@@ -1,4 +1,4 @@
-#  ТАБЛИЦАИ НАВ БАРОИ ЛОГ КАССИРО 
+#  ТАБЛИЦАИ НАВ БАРОИ ЛОГ КАССИРО  
 CREATE TABLE log_kassir (
     id           INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_kassir    INT          NOT NULL,
