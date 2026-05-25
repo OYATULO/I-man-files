@@ -11,7 +11,9 @@ CREATE TABLE log_kassir (
     INDEX idx_action  (action),
     INDEX idx_date    (date_time)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
 //////////////////////////////////////////////////////////
+
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
