@@ -16,6 +16,18 @@ CREATE TABLE log_kassir (
 
 //////////////////////////////////////////////////////////
 
+# НАСТРОЙКА ТАБЛИСА БАРОИ ПОИСК 
+CREATE INDEX idx_incomegoods_goodsid   ON incomegoods(GoodsId);
+CREATE INDEX idx_incomegoods_incomeid  ON incomegoods(IncomeId);
+CREATE INDEX idx_warehouse_incomegoodsid ON warehouse(IncomeGoodsId);
+CREATE INDEX idx_warehouse_warehouseid ON warehouse(WarehouseId);
+CREATE INDEX idx_incomes_supplierid    ON incomes(SupplierId);
+CREATE INDEX idx_goods_manufacturerid  ON goods(ManufacturerId);
+CREATE INDEX idx_goods_typeid          ON goods(TypeId);
+
+//////////////////////////////////////////////////
+
+
 #  ТАБЛИЦАИ НАВ БАРОИ РУЧНОЙ ЗАКАЗ 
 CREATE TABLE `customfororder` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
