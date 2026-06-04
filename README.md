@@ -17,16 +17,18 @@ CREATE TABLE log_kassir (
 //////////////////////////////////////////////////////////
 
 # НАСТРОЙКА ТАБЛИСА БАРОИ ПОИСК 
-CREATE INDEX idx_wh_core
-    ON warehouse (WarehouseId, AmountContainer, AmountUnit, IncomeGoodsId);
-CREATE INDEX idx_incomes_supplierid    ON incomes(SupplierId);
-CREATE INDEX idx_wh_barcode
-    ON warehouse (Barcode);
-CREATE INDEX idx_ig_join
-    ON incomegoods (Id, GoodsId, IncomeId);
-CREATE INDEX idx_goods_manufacturerid  ON goods(ManufacturerId);
-CREATE INDEX idx_goods_typeid          ON goods(TypeId);
-CREATE FULLTEXT INDEX idx_goods_name ON goods (Name);
+CREATE INDEX idx_warehouse_incomegoods_warehouse 
+    ON warehouse(IncomeGoodsId, WarehouseId, AmountContainer, AmountUnit);
+-- incomegoods: join columns
+CREATE INDEX idx_incomegoods_goodsid_incomeid 
+    ON incomegoods(GoodsId, IncomeId);
+-- incomes: join + supplier
+CREATE INDEX idx_incomes_supplier 
+    ON incomes(Id, SupplierId);
+-- goods: manufacturer + type (for LEFT JOINs)
+CREATE INDEX idx_goods_manufacturer_type 
+    ON goods(ManufacturerId, TypeId);
+ALTER TABLE goods ADD FULLTEXT INDEX ft_goods_name (Name);
 
 //////////////////////////////////////////////////
 
