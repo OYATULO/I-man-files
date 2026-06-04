@@ -24,6 +24,7 @@ CREATE INDEX idx_warehouse_warehouseid ON warehouse(WarehouseId);
 CREATE INDEX idx_incomes_supplierid    ON incomes(SupplierId);
 CREATE INDEX idx_goods_manufacturerid  ON goods(ManufacturerId);
 CREATE INDEX idx_goods_typeid          ON goods(TypeId);
+ALTER TABLE goods ADD FULLTEXT INDEX ft_goods_name (Name);
 
 //////////////////////////////////////////////////
 
