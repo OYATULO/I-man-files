@@ -1,4 +1,4 @@
-# CREATE DATABASE I-MAN
+# CОХТАНИ БАЗАИ I-MAN
 
 CREATE DATABASE `i-man`
   CHARACTER SET utf8mb4
