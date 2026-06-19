@@ -23,7 +23,6 @@ ALTER TABLE `client_type` ENGINE=InnoDB;
 ALTER TABLE `credit` ENGINE=InnoDB;
 ALTER TABLE `credithistory` ENGINE=InnoDB;
 ALTER TABLE `messages` ENGINE=InnoDB;
-ALTER TABLE `datalog` ENGINE=InnoDB;
 ALTER TABLE `customfororder` ENGINE=InnoDB;
 ALTER TABLE `client` ENGINE=InnoDB;
 ALTER TABLE `permissionrole` ENGINE=InnoDB;
@@ -39,7 +38,6 @@ ALTER TABLE `sales` ENGINE=InnoDB;
 ALTER TABLE `warehouse` ENGINE=InnoDB;
 ALTER TABLE `incomegoods` ENGINE=InnoDB;
 ALTER TABLE `salesgoods` ENGINE=InnoDB;
-ALTER TABLE `tb_asynkassa` ENGINE=InnoDB;
 
 # CHANGE DATABASE - CHARSET TO utf8mb4 - utf8mb4_unicode_ci
 ALTER DATABASE `i-man` 
@@ -70,7 +68,6 @@ ALTER TABLE `client_type` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unico
 ALTER TABLE `credit` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `credithistory` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `messages` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-ALTER TABLE `datalog` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `customfororder` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `client` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `permissionrole` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -86,4 +83,3 @@ ALTER TABLE `sales` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `warehouse` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `incomegoods` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE `salesgoods` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-ALTER TABLE `tb_asynkassa` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
