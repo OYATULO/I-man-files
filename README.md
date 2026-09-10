@@ -10,6 +10,8 @@ CREATE TABLE TBFiscalReceipt (
     Fpd VARCHAR(64),
     PrinterName VARCHAR(255),
     OnlineStatus TINYINT(1),
+    CheckNumber INT NULL,
+    ErrorMessage TEXT NULL,
     RawJson LONGTEXT
 );
 
