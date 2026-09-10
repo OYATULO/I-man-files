@@ -3,14 +3,29 @@
 CREATE TABLE TBFiscalReceipt (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     name_kassir VARCHAR(255),
-    MacPC VARCHAR(64),
+    MacPC VARCHAR(64),    
     InsertDate DATETIME,
     FdNumber VARCHAR(64),
     ReceiptNumber VARCHAR(64),
     Fpd VARCHAR(64),
+    PrinterName VARCHAR(255),
     OnlineStatus TINYINT(1),
     RawJson LONGTEXT
 );
+
+CREATE TABLE TBFiscalPrinter (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255),
+    Host VARCHAR(64),
+    Port INT
+);
+
+CREATE TABLE TBFiscalPrinterAccess (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    PrinterId INT,
+    KassirId INT
+);
+
 ///////////////////////////////////////////////////////////////////
 
 #  ТАБЛИЦАИ НАВ БАРОИ ЛОГ КАССИРО 
