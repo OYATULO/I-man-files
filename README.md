@@ -1,3 +1,18 @@
+#  ТАБЛИСАИ НАВ БАРОИ ФИСКАЛНЫЙ ЧЕК 
+
+CREATE TABLE TBFiscalReceipt (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    name_kassir VARCHAR(255),
+    MacPC VARCHAR(64),
+    InsertDate DATETIME,
+    FdNumber VARCHAR(64),
+    ReceiptNumber VARCHAR(64),
+    Fpd VARCHAR(64),
+    OnlineStatus TINYINT(1),
+    RawJson LONGTEXT
+);
+///////////////////////////////////////////////////////////////////
+
 #  ТАБЛИЦАИ НАВ БАРОИ ЛОГ КАССИРО 
 CREATE TABLE log_kassir (
     id           INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
