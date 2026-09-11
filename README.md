@@ -11,7 +11,7 @@ CREATE TABLE TBFiscalReceipt (
     PrinterName VARCHAR(255),
     OnlineStatus TINYINT(1),
     CheckNumber INT NULL,
-    Pricechek DOUBLE(18,2) NULL DEFAULT 0,00 ,
+    Pricechek DOUBLE(18,2),
     ErrorMessage TEXT NULL,
     RawJson LONGTEXT
 );
